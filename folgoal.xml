@@ -1,0 +1,449 @@
+<alloy builddate="2024-02-02T01:27:14.470Z">
+
+<instance bitwidth="4" maxseq="4" command="Run findSeparator for 6 Formula, 2 Atom, 2 Quantifier, 2 Variable" filename="/Users/onean/REUSE/FOL.als">
+
+<sig label="seq/Int" ID="0" parentID="1" builtin="yes">
+</sig>
+
+<sig label="Int" ID="1" parentID="2" builtin="yes">
+</sig>
+
+<sig label="String" ID="3" parentID="2" builtin="yes">
+</sig>
+
+<sig label="this/V0" ID="4" parentID="5" one="yes">
+   <atom label="V0$0"/>
+</sig>
+
+<sig label="this/V1" ID="6" parentID="5" one="yes">
+   <atom label="V1$0"/>
+</sig>
+
+<sig label="this/Variable" ID="5" parentID="2" abstract="yes">
+</sig>
+
+<sig label="this/N1" ID="7" parentID="8" one="yes">
+   <atom label="N1$0"/>
+</sig>
+
+<sig label="this/N2" ID="9" parentID="8" one="yes">
+   <atom label="N2$0"/>
+</sig>
+
+<sig label="this/N3" ID="10" parentID="8" one="yes">
+   <atom label="N3$0"/>
+</sig>
+
+<sig label="this/Element" ID="8" parentID="2" abstract="yes">
+</sig>
+
+<sig label="this/E" ID="11" parentID="12" one="yes">
+   <atom label="E$0"/>
+</sig>
+
+<sig label="this/Relation" ID="12" parentID="2" abstract="yes">
+</sig>
+
+<sig label="this/Atom" ID="13" parentID="14">
+   <atom label="Atom$0"/>
+   <atom label="Atom$1"/>
+</sig>
+
+<field label="relation" ID="15" parentID="13">
+   <tuple> <atom label="Atom$0"/> <atom label="E$0"/> </tuple>
+   <tuple> <atom label="Atom$1"/> <atom label="E$0"/> </tuple>
+   <types> <type ID="13"/> <type ID="12"/> </types>
+</field>
+
+<field label="vars" ID="16" parentID="13">
+   <tuple> <atom label="Atom$0"/> <atom label="0"/> <atom label="V0$0"/> </tuple>
+   <tuple> <atom label="Atom$0"/> <atom label="1"/> <atom label="V1$0"/> </tuple>
+   <tuple> <atom label="Atom$1"/> <atom label="0"/> <atom label="V1$0"/> </tuple>
+   <tuple> <atom label="Atom$1"/> <atom label="1"/> <atom label="V0$0"/> </tuple>
+   <types> <type ID="13"/> <type ID="0"/> <type ID="5"/> </types>
+</field>
+
+<sig label="this/Forall" ID="17" parentID="18">
+   <atom label="Forall$0"/>
+   <atom label="Forall$1"/>
+</sig>
+
+<sig label="this/Exists" ID="19" parentID="18">
+</sig>
+
+<sig label="this/Quantifier" ID="18" parentID="14" abstract="yes">
+</sig>
+
+<field label="bound_var" ID="20" parentID="18">
+   <tuple> <atom label="Forall$0"/> <atom label="V0$0"/> </tuple>
+   <tuple> <atom label="Forall$1"/> <atom label="V1$0"/> </tuple>
+   <types> <type ID="18"/> <type ID="5"/> </types>
+</field>
+
+<field label="body" ID="21" parentID="18">
+   <tuple> <atom label="Forall$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Forall$1"/> <atom label="Implies$0"/> </tuple>
+   <types> <type ID="18"/> <type ID="14"/> </types>
+</field>
+
+<sig label="this/Not" ID="22" parentID="23">
+   <atom label="Not$0"/>
+</sig>
+
+<sig label="this/UnaryConnective" ID="23" parentID="14" abstract="yes">
+</sig>
+
+<field label="child" ID="24" parentID="23">
+   <tuple> <atom label="Not$0"/> <atom label="Forall$0"/> </tuple>
+   <types> <type ID="23"/> <type ID="14"/> </types>
+</field>
+
+<sig label="this/And" ID="25" parentID="26">
+</sig>
+
+<sig label="this/Or" ID="27" parentID="26">
+</sig>
+
+<sig label="this/Implies" ID="28" parentID="26">
+   <atom label="Implies$0"/>
+</sig>
+
+<sig label="this/BinaryConnective" ID="26" parentID="14" abstract="yes">
+</sig>
+
+<field label="left" ID="29" parentID="26">
+   <tuple> <atom label="Implies$0"/> <atom label="Atom$1"/> </tuple>
+   <types> <type ID="26"/> <type ID="14"/> </types>
+</field>
+
+<field label="right" ID="30" parentID="26">
+   <tuple> <atom label="Implies$0"/> <atom label="Atom$0"/> </tuple>
+   <types> <type ID="26"/> <type ID="14"/> </types>
+</field>
+
+<sig label="this/Formula" ID="14" parentID="2" abstract="yes">
+</sig>
+
+<sig label="this/EmptyEnvironment" ID="31" parentID="32" one="yes">
+   <atom label="EmptyEnvironment$0"/>
+</sig>
+
+<sig label="this/Env_V0_N1" ID="33" parentID="32" one="yes">
+   <atom label="Env_V0_N1$0"/>
+</sig>
+
+<sig label="this/Env_V0_N2" ID="34" parentID="32" one="yes">
+   <atom label="Env_V0_N2$0"/>
+</sig>
+
+<sig label="this/Env_V0_N3" ID="35" parentID="32" one="yes">
+   <atom label="Env_V0_N3$0"/>
+</sig>
+
+<sig label="this/Env_V1_N1" ID="36" parentID="32" one="yes">
+   <atom label="Env_V1_N1$0"/>
+</sig>
+
+<sig label="this/Env_V1_N2" ID="37" parentID="32" one="yes">
+   <atom label="Env_V1_N2$0"/>
+</sig>
+
+<sig label="this/Env_V1_N3" ID="38" parentID="32" one="yes">
+   <atom label="Env_V1_N3$0"/>
+</sig>
+
+<sig label="this/Env_V0_N1_V1_N1" ID="39" parentID="32" one="yes">
+   <atom label="Env_V0_N1_V1_N1$0"/>
+</sig>
+
+<sig label="this/Env_V0_N1_V1_N2" ID="40" parentID="32" one="yes">
+   <atom label="Env_V0_N1_V1_N2$0"/>
+</sig>
+
+<sig label="this/Env_V0_N1_V1_N3" ID="41" parentID="32" one="yes">
+   <atom label="Env_V0_N1_V1_N3$0"/>
+</sig>
+
+<sig label="this/Env_V0_N2_V1_N1" ID="42" parentID="32" one="yes">
+   <atom label="Env_V0_N2_V1_N1$0"/>
+</sig>
+
+<sig label="this/Env_V0_N2_V1_N2" ID="43" parentID="32" one="yes">
+   <atom label="Env_V0_N2_V1_N2$0"/>
+</sig>
+
+<sig label="this/Env_V0_N2_V1_N3" ID="44" parentID="32" one="yes">
+   <atom label="Env_V0_N2_V1_N3$0"/>
+</sig>
+
+<sig label="this/Env_V0_N3_V1_N1" ID="45" parentID="32" one="yes">
+   <atom label="Env_V0_N3_V1_N1$0"/>
+</sig>
+
+<sig label="this/Env_V0_N3_V1_N2" ID="46" parentID="32" one="yes">
+   <atom label="Env_V0_N3_V1_N2$0"/>
+</sig>
+
+<sig label="this/Env_V0_N3_V1_N3" ID="47" parentID="32" one="yes">
+   <atom label="Env_V0_N3_V1_N3$0"/>
+</sig>
+
+<sig label="this/Environment" ID="32" parentID="2" abstract="yes">
+</sig>
+
+<field label="mapping" ID="48" parentID="32">
+   <tuple> <atom label="Env_V0_N1$0"/> <atom label="V0$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N2$0"/> <atom label="V0$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N3$0"/> <atom label="V0$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Env_V1_N1$0"/> <atom label="V1$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V1_N2$0"/> <atom label="V1$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V1_N3$0"/> <atom label="V1$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="V0$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="V1$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="V0$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="V1$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="V0$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="V1$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="V0$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="V1$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="V0$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="V1$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="V0$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="V1$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="V0$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="V1$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="V0$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="V1$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="V0$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="V1$0"/> <atom label="N3$0"/> </tuple>
+   <types> <type ID="32"/> <type ID="5"/> <type ID="8"/> </types>
+</field>
+
+<sig label="this/Pos_Edge" ID="49" parentID="50" one="yes">
+   <atom label="Pos_Edge$0"/>
+</sig>
+
+<sig label="this/PositiveStructure" ID="50" parentID="51" abstract="yes">
+</sig>
+
+<sig label="this/Neg_NoEdge" ID="52" parentID="53" one="yes">
+   <atom label="Neg_NoEdge$0"/>
+</sig>
+
+<sig label="this/Neg_NoEdge2" ID="54" parentID="53" one="yes">
+   <atom label="Neg_NoEdge2$0"/>
+</sig>
+
+<sig label="this/NegativeStructure" ID="53" parentID="51" abstract="yes">
+</sig>
+
+<sig label="this/Structure" ID="51" parentID="2" abstract="yes">
+</sig>
+
+<field label="elements" ID="55" parentID="51">
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="N3$0"/> </tuple>
+   <types> <type ID="51"/> <type ID="8"/> </types>
+</field>
+
+<field label="interpretation" ID="56" parentID="51">
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="E$0"/> <atom label="N1$0"/> <atom label="N2$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="E$0"/> <atom label="N2$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="E$0"/> <atom label="N2$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="E$0"/> <atom label="N3$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="E$0"/> <atom label="N1$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="E$0"/> <atom label="N3$0"/> <atom label="N1$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="E$0"/> <atom label="N2$0"/> <atom label="N3$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="E$0"/> <atom label="N3$0"/> <atom label="N2$0"/> </tuple>
+   <types> <type ID="51"/> <type ID="12"/> <type ID="8"/> <type ID="8"/> </types>
+</field>
+
+<field label="satisfies" ID="57" parentID="51">
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N1$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N2$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N3$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Not$0"/> </tuple>
+   <tuple> <atom label="Pos_Edge$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="EmptyEnvironment$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N1_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N2_V1_N3$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N1$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N2$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Implies$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Neg_NoEdge2$0"/> <atom label="Env_V0_N3_V1_N3$0"/> <atom label="Forall$1"/> </tuple>
+   <types> <type ID="51"/> <type ID="32"/> <type ID="14"/> </types>
+</field>
+
+<sig label="this/Separator" ID="58" parentID="2" one="yes">
+   <atom label="Separator$0"/>
+</sig>
+
+<field label="root" ID="59" parentID="58">
+   <tuple> <atom label="Separator$0"/> <atom label="Not$0"/> </tuple>
+   <types> <type ID="58"/> <type ID="14"/> </types>
+</field>
+
+<sig label="univ" ID="2" builtin="yes">
+</sig>
+
+<skolem label="$this/all_children" ID="m0">
+   <tuple> <atom label="Not$0"/> <atom label="Forall$0"/> </tuple>
+   <tuple> <atom label="Implies$0"/> <atom label="Atom$0"/> </tuple>
+   <tuple> <atom label="Implies$0"/> <atom label="Atom$1"/> </tuple>
+   <tuple> <atom label="Forall$0"/> <atom label="Forall$1"/> </tuple>
+   <tuple> <atom label="Forall$1"/> <atom label="Implies$0"/> </tuple>
+   <types> <type ID="14"/> <type ID="14"/> </types>
+</skolem>
+
+</instance>
+
+<source filename="/Users/onean/REUSE/FOL.als" content="module FOLSeparator&#x000a;&#x000a;abstract sig Variable {}&#x000a;abstract sig Element {}&#x000a;abstract sig Relation {}&#x000a;&#x000a;abstract sig Formula {}&#x000a;&#x000a;sig Atom extends Formula {&#x000a;    relation: one Relation,&#x000a;    vars: seq Variable&#x000a;} {&#x000a;    relation = E implies #vars = 2&#x000a;    relation = E implies vars[0] != vars[1]&#x000a;}&#x000a;&#x000a;abstract sig Quantifier extends Formula {&#x000a;    bound_var: one Variable,&#x000a;    body: one Formula&#x000a;}&#x000a;&#x000a;sig Forall extends Quantifier {}&#x000a;sig Exists extends Quantifier {}&#x000a;&#x000a;abstract sig UnaryConnective extends Formula {&#x000a;    child: one Formula&#x000a;}&#x000a;sig Not extends UnaryConnective {}&#x000a;&#x000a;abstract sig BinaryConnective extends Formula {&#x000a;    left: one Formula,&#x000a;    right: one Formula&#x000a;} {&#x000a;    left != right&#x000a;}&#x000a;sig And extends BinaryConnective {}&#x000a;sig Or extends BinaryConnective {}&#x000a;sig Implies extends BinaryConnective {}&#x000a;&#x000a;// environment maps variable to a constant&#x000a;abstract sig Environment {&#x000a;    mapping: Variable -&gt; lone Element&#x000a;}&#x000a;&#x000a;one sig EmptyEnvironment extends Environment {} {&#x000a;    no mapping&#x000a;}&#x000a;&#x000a;&#x000a;&#x000a;abstract sig Structure {&#x000a;    elements: set Element,&#x000a;    interpretation: Relation -&gt; set (Element -&gt; Element),&#x000a;    satisfies: Environment -&gt; set Formula&#x000a;}&#x000a;&#x000a;abstract sig PositiveStructure extends Structure {}&#x000a;abstract sig NegativeStructure extends Structure {}&#x000a;&#x000a;fun all_children : Formula -&gt; Formula {&#x000a;    (Quantifier &lt;: body) + (UnaryConnective &lt;: child) + &#x000a;    (BinaryConnective &lt;: left) + (BinaryConnective &lt;: right)&#x000a;}&#x000a;&#x000a;//add extra relation to environment&#x000a;fun extendEnv[env: Environment, v: Variable, e: Element]: Environment {&#x000a;    // Find the pre-generated environment that has the right mapping&#x000a;    {env&apos;: Environment | env&apos;.mapping = env.mapping ++ (v -&gt; e)}&#x000a;}&#x000a;&#x000a;&#x000a;fact Semantics {&#x000a;    all s: Structure {&#x000a;        // Atom semantics&#x000a;        all env: Environment, a: Atom |&#x000a;            (env -&gt; a) in s.satisfies iff (&#x000a;                a.relation = E and&#x000a;                all v: a.vars[Int] | v in env.mapping.Element and&#x000a;                (env.mapping[a.vars[0]] -&gt; env.mapping[a.vars[1]]) in s.interpretation[a.relation]&#x000a;            )&#x000a;        &#x000a;        // Not semantics&#x000a;        all env: Environment, n: Not |&#x000a;            (env -&gt; n) in s.satisfies iff &#x000a;            (env -&gt; n.child) not in s.satisfies&#x000a;        &#x000a;        // And semantics&#x000a;        all env: Environment, a: And |&#x000a;            (env -&gt; a) in s.satisfies iff &#x000a;            ((env -&gt; a.left) in s.satisfies and (env -&gt; a.right) in s.satisfies)&#x000a;        &#x000a;        // Or semantics&#x000a;        all env: Environment, o: Or |&#x000a;            (env -&gt; o) in s.satisfies iff &#x000a;            ((env -&gt; o.left) in s.satisfies or (env -&gt; o.right) in s.satisfies)&#x000a;        &#x000a;        // Implies semantics&#x000a;        all env: Environment, i: Implies |&#x000a;            (env -&gt; i) in s.satisfies iff &#x000a;            ((env -&gt; i.left) not in s.satisfies or (env -&gt; i.right) in s.satisfies)&#x000a;        &#x000a;        // Forall semantics&#x000a;        all env: Environment, f: Forall |&#x000a;            (env -&gt; f) in s.satisfies iff &#x000a;            (all e: s.elements | &#x000a;                let env&apos; = extendEnv[env, f.bound_var, e] |&#x000a;                one env&apos; implies (env&apos; -&gt; f.body) in s.satisfies)&#x000a;        &#x000a;        // Exists semantics&#x000a;        all env: Environment, e: Exists |&#x000a;            (env -&gt; e) in s.satisfies iff &#x000a;            (some elem: s.elements | &#x000a;                let env&apos; = extendEnv[env, e.bound_var, elem] |&#x000a;                one env&apos; and (env&apos; -&gt; e.body) in s.satisfies)&#x000a;    }&#x000a;}&#x000a;&#x000a;// makes  a DAG&#x000a;fact FormulaStructure {&#x000a;    no f: Formula | f in f.^all_children&#x000a;    all f: Formula - Separator.root | one all_children.f&#x000a;    Formula = Separator.root.*all_children&#x000a;}&#x000a;&#x000a;// al vars must be bound&#x000a;fact WellFormedness {&#x000a;    all a: Atom | all v: a.vars[Int] |&#x000a;        some q: Quantifier | q.bound_var = v and a in q.^all_children&#x000a;    &#x000a;    all q1, q2: Quantifier | &#x000a;        q2 in q1.^all_children implies q1.bound_var != q2.bound_var&#x000a;}&#x000a;&#x000a;// no duplicate atom and no double negation&#x000a;fact AvoidDegenerateFormulas {&#x000a;    no n1, n2: Not | n2 = n1.child&#x000a;    no disj a1, a2: Atom | &#x000a;        a1.relation = a2.relation and a1.vars = a2.vars&#x000a;}&#x000a;&#x000a;one sig Separator {&#x000a;    root: one Formula&#x000a;}&#x000a;&#x000a;one sig V0, V1 extends Variable {}&#x000a;one sig E extends Relation {}&#x000a;one sig N1, N2, N3 extends Element {}&#x000a;&#x000a;one sig Pos_Edge extends PositiveStructure {} {&#x000a;    elements = N1 + N2 + N3&#x000a;    interpretation[E] = (N1-&gt;N2) + (N2-&gt;N1) + (N2-&gt;N3) + (N3-&gt;N1)&#x000a;}&#x000a;&#x000a;one sig Neg_NoEdge extends NegativeStructure {} {&#x000a;    elements = N1 + N3  &#x000a;    interpretation[E] = (N1-&gt;N3) + (N3-&gt;N1)&#x000a;}&#x000a;&#x000a;one sig Neg_NoEdge2 extends NegativeStructure {} {&#x000a;    elements = N2 + N3  &#x000a;    interpretation[E] = (N2-&gt;N3) + (N3-&gt;N2)&#x000a;}&#x000a;&#x000a;one sig Env_V0_N1 extends Environment {} {&#x000a;    mapping = V0-&gt;N1&#x000a;}&#x000a;one sig Env_V0_N2 extends Environment {} {&#x000a;    mapping = V0-&gt;N2&#x000a;}&#x000a;one sig Env_V0_N3 extends Environment {} {&#x000a;    mapping = V0-&gt;N3&#x000a;}&#x000a;one sig Env_V1_N1 extends Environment {} {&#x000a;    mapping = V1-&gt;N1&#x000a;}&#x000a;one sig Env_V1_N2 extends Environment {} {&#x000a;    mapping = V1-&gt;N2&#x000a;}&#x000a;one sig Env_V1_N3 extends Environment {} {&#x000a;    mapping = V1-&gt;N3&#x000a;}&#x000a;&#x000a;one sig Env_V0_N1_V1_N1 extends Environment {} {&#x000a;    mapping = V0-&gt;N1 + V1-&gt;N1&#x000a;}&#x000a;one sig Env_V0_N1_V1_N2 extends Environment {} {&#x000a;    mapping = V0-&gt;N1 + V1-&gt;N2&#x000a;}&#x000a;one sig Env_V0_N1_V1_N3 extends Environment {} {&#x000a;    mapping = V0-&gt;N1 + V1-&gt;N3&#x000a;}&#x000a;one sig Env_V0_N2_V1_N1 extends Environment {} {&#x000a;    mapping = V0-&gt;N2 + V1-&gt;N1&#x000a;}&#x000a;one sig Env_V0_N2_V1_N2 extends Environment {} {&#x000a;    mapping = V0-&gt;N2 + V1-&gt;N2&#x000a;}&#x000a;one sig Env_V0_N2_V1_N3 extends Environment {} {&#x000a;    mapping = V0-&gt;N2 + V1-&gt;N3&#x000a;}&#x000a;one sig Env_V0_N3_V1_N1 extends Environment {} {&#x000a;    mapping = V0-&gt;N3 + V1-&gt;N1&#x000a;}&#x000a;one sig Env_V0_N3_V1_N2 extends Environment {} {&#x000a;    mapping = V0-&gt;N3 + V1-&gt;N2&#x000a;}&#x000a;one sig Env_V0_N3_V1_N3 extends Environment {} {&#x000a;    mapping = V0-&gt;N3 + V1-&gt;N3&#x000a;}&#x000a;&#x000a;&#x000a;pred findSeparator {&#x000a;    all p: PositiveStructure | (EmptyEnvironment -&gt; Separator.root) in p.satisfies&#x000a;    all n: NegativeStructure | (EmptyEnvironment -&gt; Separator.root) not in n.satisfies&#x000a;    minsome #Formula&#x000a;}&#x000a;&#x000a;run findSeparator for 6 Formula, 2 Atom, 2 Quantifier, 2 Variable"/>
+
+<source filename="/$alloy4$/models/util/integer.als" content="module util/integer&#x000a;&#x000a;/*&#x000a; * A collection of utility functions for using Integers in Alloy.&#x000a; * Note that integer overflows are silently truncated to the current bitwidth&#x000a; * using the 2&apos;s complement arithmetic, unless the &quot;forbid overfows&quot; option is&#x000a; * turned on, in which case only models that don&apos;t have any overflows are &#x000a; * analyzed. &#x000a; */&#x000a;&#x000a;fun add  [n1, n2: Int] : Int { this/plus[n1, n2] }&#x000a;fun plus [n1, n2: Int] : Int { n1 fun/add n2 }&#x000a;&#x000a;fun sub   [n1, n2: Int] : Int { this/minus[n1, n2] }&#x000a;fun minus [n1, n2: Int] : Int { n1 fun/sub n2 }&#x000a;&#x000a;fun mul [n1, n2: Int] : Int { n1 fun/mul n2 }&#x000a;&#x000a;/**&#x000a; * Performs the division with &quot;round to zero&quot; semantics, except the following 3 cases&#x000a; * 1) if a is 0, then it returns 0&#x000a; * 2) else if b is 0, then it returns 1 if a is negative and -1 if a is positive&#x000a; * 3) else if a is the smallest negative integer, and b is -1, then it returns a&#x000a; */&#x000a;fun div [n1, n2: Int] : Int { n1 fun/div n2 }&#x000a;&#x000a;/** answer is defined to be the unique integer that satisfies &quot;a = ((a/b)*b) + remainder&quot; */&#x000a;fun rem [n1, n2: Int] : Int { n1 fun/rem n2 }&#x000a;&#x000a;/** negate */&#x000a;fun negate [n: Int] : Int { 0 fun/sub n }&#x000a;&#x000a;/** equal to */&#x000a;pred eq [n1, n2: Int] { int[n1] = int[n2] }&#x000a;&#x000a;/** greater than */&#x000a;pred gt [n1, n2: Int] { n1 &gt; n2 }&#x000a;&#x000a;/** less then */&#x000a;pred lt [n1, n2: Int] { n1 &lt; n2 }&#x000a;&#x000a;/** greater than or equal */&#x000a;pred gte [n1, n2: Int] { n1 &gt;= n2 }&#x000a;&#x000a;/** less than or equal */&#x000a;pred lte [n1, n2: Int] { n1 &lt;= n2 }&#x000a;&#x000a;/** integer is zero */&#x000a;pred zero [n: Int] { n = 0 }&#x000a;&#x000a;/** positive */&#x000a;pred pos  [n: Int] { n &gt; 0 }&#x000a;&#x000a;/** negative */&#x000a;pred neg  [n: Int] { n &lt; 0 }&#x000a;&#x000a;/** non-positive */&#x000a;pred nonpos [n: Int] { n &lt;= 0 }&#x000a;&#x000a;/** non-negative */&#x000a;pred nonneg [n: Int] { n &gt;= 0 }&#x000a;&#x000a;/** signum (aka sign or sgn) */&#x000a;fun signum [n: Int] : Int { n&lt;0 =&gt; (0 fun/sub 1) else (n&gt;0 =&gt; 1 else 0) }&#x000a;&#x000a;/**&#x000a; * returns the ith element (zero-based) from the set s&#x000a; * in the ordering of &apos;next&apos;, which is a linear ordering&#x000a; * relation like that provided by util/ordering&#x000a; */&#x000a;fun int2elem[i: Int, next: univ-&gt;univ, s: set univ] : lone s {&#x000a;  {e: s | #^next.e = int i }&#x000a;}&#x000a;&#x000a;/**&#x000a; * returns the index of the element (zero-based) in the&#x000a; * ordering of next, which is a linear ordering relation&#x000a; * like that provided by util/ordering&#x000a; */&#x000a;fun elem2int[e: univ, next: univ-&gt;univ] : lone Int {&#x000a;  Int[#^next.e]&#x000a;}&#x000a;&#x000a;/** returns the largest integer in the current bitwidth */&#x000a;fun max:one Int { fun/max }&#x000a;&#x000a;/** returns the smallest integer in the current bitwidth */&#x000a;fun min:one Int { fun/min }&#x000a;&#x000a;/** maps each integer (except max) to the integer after it */&#x000a;fun next:Int-&gt;Int { fun/next }&#x000a;&#x000a;/** maps each integer (except min) to the integer before it */&#x000a;fun prev:Int-&gt;Int { ~next }&#x000a;&#x000a;/** given a set of integers, return the largest element */&#x000a;fun max [es: set Int]: lone Int { es - es.^prev }&#x000a;&#x000a;/** given a set of integers, return the smallest element */&#x000a;fun min [es: set Int]: lone Int { es - es.^next }&#x000a;&#x000a;/** given an integer, return all integers prior to it */&#x000a;fun prevs [e: Int]: set Int { e.^prev }&#x000a;&#x000a;/** given an integer, return all integers following it */&#x000a;fun nexts [e: Int]: set Int { e.^next }&#x000a;&#x000a;/** returns the larger of the two integers */&#x000a;fun larger [e1, e2: Int]: Int { let a=int[e1], b=int[e2] | (a&lt;b =&gt; b else a) }&#x000a;&#x000a;/** returns the smaller of the two integers */&#x000a;fun smaller [e1, e2: Int]: Int { let a=int[e1], b=int[e2] | (a&lt;b =&gt; a else b) }&#x000a;"/>
+
+<source filename="/$alloy4$/models/util/sequniv.als" content="module util/sequniv&#x000a;&#x000a;open util/integer as ui&#x000a;&#x000a;/*&#x000a; * NOTE: Do not include this module manually.&#x000a; * Instead, use the &quot;seq&quot; keyword which will automatically&#x000a; * import this module with the correct additional constraints as needed.&#x000a; */&#x000a;&#x000a;/*&#x000a; * A sequence utility for modeling sequences as just a&#x000a; * relation as opposed to reifying them into sequence&#x000a; * atoms like the util/sequence module does.&#x000a; *&#x000a; * Precondition: each input sequence must range over a prefix&#x000a; * of seq/Int.&#x000a; *&#x000a; * Postcondition: we guarantee the returned sequence&#x000a; * also ranges over a prefix of seq/Int.&#x000a; *&#x000a; * @author Greg Dennis&#x000a; */&#x000a;&#x000a;/** sequence covers a prefix of seq/Int */&#x000a;pred isSeq[s: Int -&gt; univ] {&#x000a;  s in seq/Int -&gt; lone univ&#x000a;  s.inds - ui/next[s.inds] in 0&#x000a;}&#x000a;&#x000a;/** returns all the elements in this sequence */&#x000a;fun elems [s: Int -&gt; univ]: set (Int.s) { seq/Int . s }&#x000a;&#x000a;/**&#x000a; * returns the first element in the sequence&#x000a; * (Returns the empty set if the sequence is empty)&#x000a; */&#x000a;fun first [s: Int -&gt; univ]: lone (Int.s) { s[0] }&#x000a;&#x000a;/**&#x000a; * returns the last element in the sequence&#x000a; * (Returns the empty set if the sequence is empty)&#x000a; */&#x000a;fun last [s: Int -&gt; univ]: lone (Int.s) { s[lastIdx[s]] }&#x000a;&#x000a;/**&#x000a; * returns the cdr of the sequence&#x000a; * (Returns the empty sequence if the sequence has 1 or fewer element)&#x000a; */&#x000a;fun rest [s: Int -&gt; univ] : s { seq/Int &lt;: ((ui/next).s) }&#x000a;&#x000a;/** returns all but the last element of the sequence */&#x000a;fun butlast [s: Int -&gt; univ] : s {&#x000a;  (seq/Int - lastIdx[s]) &lt;: s&#x000a;}&#x000a;&#x000a;/** true if the sequence is empty */&#x000a;pred isEmpty [s: Int -&gt; univ] { no s }&#x000a;&#x000a;/** true if this sequence has duplicates */&#x000a;pred hasDups [s: Int -&gt; univ] { # elems[s] &lt; # inds[s] }&#x000a;&#x000a;/** returns all the indices occupied by this sequence */&#x000a;fun inds [s: Int -&gt; univ]: set Int { s.univ }&#x000a;&#x000a;/**&#x000a; * returns last index occupied by this sequence&#x000a; * (Returns the empty set if the sequence is empty)&#x000a; */&#x000a;fun lastIdx [s: Int -&gt; univ]: lone Int { ui/max[inds[s]] }&#x000a;&#x000a;/**&#x000a; * returns the index after the last index&#x000a; * if this sequence is empty, returns 0&#x000a; * if this sequence is full, returns empty set&#x000a; */&#x000a;fun afterLastIdx [s: Int -&gt; univ] : lone Int { ui/min[seq/Int - inds[s]] }&#x000a;&#x000a;/** returns first index at which given element appears or the empty set if it doesn&apos;t */&#x000a;fun idxOf [s: Int -&gt; univ, e: univ] : lone Int { ui/min[indsOf[s, e]] }&#x000a;&#x000a;/** returns last index at which given element appears or the empty set if it doesn&apos;t */&#x000a;fun lastIdxOf [s: Int -&gt; univ, e: univ] : lone Int { ui/max[indsOf[s, e]] }&#x000a;&#x000a;/** returns set of indices at which given element appears or the empty set if it doesn&apos;t */&#x000a;fun indsOf [s: Int -&gt; univ, e: univ] : set Int { s.e }&#x000a;&#x000a;/**&#x000a; * return the result of appending e to the end of s&#x000a; * (returns s if s exhausted seq/Int)&#x000a; */&#x000a;fun add [s: Int -&gt; univ, e: univ] : s + (seq/Int-&gt;e) {&#x000a;  setAt[s, afterLastIdx[s], e]&#x000a;}&#x000a;&#x000a;/**&#x000a; * returns the result of setting the value at index i in sequence to e&#x000a; * Precondition: 0 &lt;= i &lt; #s&#x000a; */&#x000a;fun setAt [s: Int -&gt; univ, i: Int, e: univ] : s + (seq/Int-&gt;e) {&#x000a;  s ++ i -&gt; e&#x000a;}&#x000a;&#x000a;/**&#x000a; * returns the result of inserting value e at index i&#x000a; * (if sequence was full, the original last element will be removed first)&#x000a; * Precondition: 0 &lt;= i &lt;= #s&#x000a; */&#x000a;fun insert [s: Int -&gt; univ, i: Int, e: univ] : s + (seq/Int-&gt;e) {&#x000a;  seq/Int &lt;: ((ui/prevs[i] &lt;: s) + (i-&gt;e) + ui/prev.((ui/nexts[i] + i) &lt;: s))&#x000a;}&#x000a;&#x000a;/**&#x000a; * returns the result of deleting the value at index i&#x000a; * Precondition: 0 &lt;= i &lt; #s&#x000a; */&#x000a;fun delete[s: Int -&gt; univ, i: Int] : s {&#x000a;  (ui/prevs[i] &lt;: s) + (ui/next).(ui/nexts[i] &lt;: s)&#x000a;}&#x000a;&#x000a;/**&#x000a; * appended is the result of appending s2 to s1&#x000a; * (If the resulting sequence is too long, it will be truncated)&#x000a; */&#x000a;fun append [s1, s2: Int -&gt; univ] : s1+s2 {&#x000a;  let shift = {i&apos;, i: seq/Int | int[i&apos;] = ui/add[int[i], ui/add[int[lastIdx[s1]], 1]] } |&#x000a;    no s1 =&gt; s2 else (s1 + shift.s2)&#x000a;}&#x000a;&#x000a;/**&#x000a; * returns the subsequence of s between from and to, inclusive&#x000a; * Precondition: 0 &lt;= from &lt;= to &lt; #s&#x000a; */&#x000a;fun subseq [s: Int -&gt; univ, from, to: Int] : s {&#x000a;  let shift = {i&apos;, i: seq/Int | int[i&apos;] = ui/sub[int[i], int[from]] } |&#x000a;    shift.((seq/Int - ui/nexts[to]) &lt;: s)&#x000a;}&#x000a;"/>
+
+</alloy>
