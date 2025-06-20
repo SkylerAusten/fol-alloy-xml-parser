@@ -1,1 +1,8 @@
 .venv/
+*.aux
+*.pdf
+*.zip
+*.log
+*.fls
+*.gz
+*.fdb_latexmk
