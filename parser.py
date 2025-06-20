@@ -74,6 +74,23 @@ def clean_formula(formula: str) -> str:
 
     return formula
 
+# Convert to LaTeX math format
+def to_latex(formula: str) -> str:
+    replacements = {
+        "¬": r"\lnot ",
+        "∧": r"\land ",
+        "∨": r"\lor ",
+        "→": r"\rightarrow ",
+        "∀": r"\forall ",
+        "∃": r"\exists ",
+        ".(": r"\,(",
+    }
+
+    latex = formula
+    for k, v in replacements.items():
+        latex = latex.replace(k, v)
+
+    return r"\[" + latex + r"\]"
 
 # Load and parse the XML.
 tree = ET.parse("folgoal2.xml")
@@ -111,4 +128,22 @@ fol_formula = parse_formula(
 
 # Pretty-print FOL.
 pretty = clean_formula(fol_formula)
+
+
+latex_formula = to_latex(pretty)
+
+# Output to LaTeX file
+with open("formula_output.tex", "w") as f:
+    f.write(
+        r"""\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+"""
+    )
+    f.write(latex_formula)
+    f.write("\n\\end{document}")
+
+
+# Print to console (Unicode)
+print("\nUnicode Formula:")
 print(pretty)
